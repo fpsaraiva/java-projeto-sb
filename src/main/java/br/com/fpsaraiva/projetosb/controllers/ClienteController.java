@@ -1,6 +1,6 @@
 package br.com.fpsaraiva.projetosb.controllers;
 
-import br.com.fpsaraiva.projetosb.models.Cliente;
+import br.com.fpsaraiva.projetosb.models.entities.Cliente;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

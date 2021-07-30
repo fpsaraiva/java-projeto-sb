@@ -1,4 +1,4 @@
-package br.com.fpsaraiva.projetosb.models;
+package br.com.fpsaraiva.projetosb.models.entities;
 
 public class Cliente {
 
