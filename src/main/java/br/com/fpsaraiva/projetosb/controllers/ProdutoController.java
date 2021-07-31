@@ -5,6 +5,8 @@ import br.com.fpsaraiva.projetosb.models.repositories.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/api/v1/produtos")
 public class ProdutoController {
@@ -14,7 +16,7 @@ public class ProdutoController {
 
     @PostMapping
     public @ResponseBody
-    Produto novoProduto(Produto produto) {
+    Produto novoProduto(@Valid Produto produto) {
         produtoRepository.save(produto);
         return produto;
     }

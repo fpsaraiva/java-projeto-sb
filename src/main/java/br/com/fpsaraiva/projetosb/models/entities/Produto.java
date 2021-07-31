@@ -1,6 +1,9 @@
 package br.com.fpsaraiva.projetosb.models.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Produto {
@@ -8,8 +11,12 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @NotBlank
     private String nome;
+    @Min(0)
     private double preco;
+    @Min(0)
+    @Max(1)
     private double desconto;
 
     public Produto() {
