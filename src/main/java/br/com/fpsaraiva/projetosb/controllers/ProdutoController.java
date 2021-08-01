@@ -27,7 +27,7 @@ public class ProdutoController {
         return produtoRepository.findAll();
     }
 
-    @GetMapping(path="/{id}")
+    @GetMapping(path = "/{id}")
     public Optional<Produto> obterProdutoPorId(@PathVariable int id) {
         return produtoRepository.findById(id);
     }
@@ -36,5 +36,10 @@ public class ProdutoController {
     public Produto atualizarProduto(@Valid Produto produto) {
         produtoRepository.save(produto);
         return produto;
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public void excluirProduto(@PathVariable int id) {
+        produtoRepository.deleteById(id);
     }
 }
